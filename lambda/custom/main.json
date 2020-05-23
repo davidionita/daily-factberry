@@ -1,0 +1,46 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.0.0"
+        },
+        {
+          "name": "alexa-styles",
+          "version": "1.0.0"
+        }
+    ],
+    "mainTemplate": {
+      "parameters": [
+          "payload"
+      ],
+      "item": [
+          {
+            "type": "Container",
+            "paddingLeft": "@spacingMedium",
+            "paddingRight": "@spacingMedium",
+            "spacing": "@spacingSmall",
+            "item": [
+              {
+                "type": "Text",
+                "textAlign": "center",
+                "fontStyle": "italic",
+                "text": "${payload.data.properties.SKILL_NAME}"
+              },
+              {
+                "type": "ScrollView",
+                "height": "70vh",
+                "item": {
+                  "type": "Text",
+                  "textAlign": "cente",
+                  "style": "textStyleKaraoke",
+                  "text": "<br> ${payload.data.properties.randomFact}"
+                }
+              }
+            ]
+          }
+      ] 
+    }
+  }
